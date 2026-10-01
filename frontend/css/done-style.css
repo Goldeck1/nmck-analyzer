@@ -1,0 +1,266 @@
+/* ================================= */
+/* === СТИЛИ ДЛЯ СТРАНИЦЫ ГОТОВО === */
+/* ================================= */
+
+/* Переопределение глобального запрета скролла */
+html, body {
+  overflow-y: auto !important; /* Разрешаем вертикальный скролл */
+  height: auto !important;
+}
+
+.page-done {
+  min-height: 100vh;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px; /* Отступ снизу, чтобы контент не прилипал */
+}
+
+.content-done-wrapper {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 60px 40px;
+}
+
+/* Кнопка Назад (аналогично nmck) */
+.back-btn-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+/* Заголовок с галочкой */
+.done-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.done-title {
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 48px); /* Как на странице НМЦК */
+  margin: 0;
+  color: #000;
+}
+
+.done-icon {
+  width: 40px;
+  height: auto;
+}
+
+.done-icon path {
+  fill: #6b8e23; /* Зеленый цвет галочки, можно подправить под макет */
+}
+
+/* Карточка результата */
+.result-card {
+  width: 100%;
+  max-width: 800px; /* Карточка шире, чем на вводе */
+  background-color: #f2f0eb;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+/* Сетка формы (переиспользование логики, но свои классы для надежности) */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.form-label {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+/* Поля только для чтения */
+.read-only-field {
+  background-color: #d9d9d9;
+  border-radius: 12px; /* Как у input на странице НМЦК */
+  padding: 12px 15px; /* Как у input */
+  font-size: 14px;
+  color: #888888;
+  cursor: default;
+  min-height: 25px; /* Примерная высота input с бордером */
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent; /* Для компенсации бордера инпута */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); /* Легкая внутренняя тень */
+}
+
+.input-short {
+  width: 120px; /* Чуть шире чем 100px на nmck, чтобы цифра влезала */
+  justify-content: center;
+}
+
+.input-textarea {
+  min-height: 90px;
+  align-items: flex-start; /* Текст сверху */
+  white-space: pre-wrap; /* Сохранять переносы */
+}
+
+/* Разделитель */
+.card-divider {
+  border: 0;
+  height: 1px;
+  background-color: #000;
+  opacity: 0.3;
+  margin: 30px 0;
+}
+
+/* Нижняя секция */
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Файлы слева, НМЦК справа */
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.files-block {
+  flex: 1;
+}
+
+.generated-files-area {
+  background-color: white; /* Серый блок */
+  min-height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.generated-file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-meta {
+  font-size: 14px;
+  color: #000;
+}
+
+.nmck-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Выровнять по верху блока файлов */
+}
+
+.nmck-value {
+  width: 140px;
+  height: 25px;
+  border-radius: 12px; /* Также правим здесь */
+  background-color: #ffffff;
+  /* Пустое поле по макету */
+}
+
+/* Кнопка действий */
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -20px; /* Подтянуть к блоку файлов, так как кнопка справа внизу */
+}
+
+.btn-download {
+  background-color: #7DAACD;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(125, 170, 205, 0.3);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-download:hover {
+  background-color: #6b9bc0;
+  transform: translateY(-1px);
+}
+
+/* Адаптив страницы Done */
+@media (max-width: 768px) {
+  .content-done-wrapper {
+    padding: 0 20px 20px;
+  }
+
+  .result-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-short {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nmck-block {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .card-actions {
+    margin-top: 20px;
+    top: 0;
+    justify-content: center;
+  }
+
+  .btn-download {
+    width: 100%;
+  }
+}

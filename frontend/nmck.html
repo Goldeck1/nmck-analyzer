@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Формирование НМЦК | Портал закупок</title>
+
+    <!-- Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style-nmck.css" />
+  </head>
+
+  <body>
+    <main class="desktop page-nmck">
+      <!-- Фоновый блюр сверху -->
+      <div class="top-blur" aria-hidden="true"></div>
+
+      <header class="page-header">
+        <div class="logo-container">
+          <img
+            class="logo-image"
+            src="img/image-2.png"
+            alt="Логотип"
+          />
+          <p class="logo-text">
+            Портал государственных закупок<br />Нижегородской области
+          </p>
+        </div>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <div class="nav-item active">
+            <a href="index.html" class="nav-link">ИИ-Помощник</a>
+            <div class="nav-indicator"></div>
+          </div>
+          <a href="instruction.html" class="nav-link">Инструкция</a>
+        </nav>
+      </header>
+
+      <!-- Контент -->
+      <div class="content-nmck-wrapper">
+
+        <!-- Кнопка Назад -->
+        <div class="back-btn-container">
+            <a href="index.html" class="back-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад
+            </a>
+        </div>
+
+        <h1 class="page-title nmck-title">Формирование НМЦК</h1>
+
+        <!-- Карточка формы -->
+        <div class="form-card">
+
+
+            <!-- Форма 1: Ручной ввод -->
+            <div class="form-content active" id="tab-manual">
+                <form id="product-form">
+                    <div class="form-row">
+                        <div class="form-group flex-grow">
+                            <label class="form-label">Наименование/ название</label>
+                            <input type="text" name="name" class="form-input" placeholder="например, ноутбук" required>
+                        </div>
+                        <div class="form-group w-auto">
+                            <label class="form-label">Кол-во</label>
+                            <input type="number" name="quantity" class="form-input input-short" min="1" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Характеристики</label>
+                        <textarea name="characteristic" class="form-input input-textarea" rows="5" placeholder="например, ноутбук с 8GB RAM" required></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Кнопка отправки (общая, но позиционируется внизу) -->
+            <div class="form-actions">
+                <button type="submit" form="product-form" class="btn-submit">Отправка запроса</button>
+            </div>
+
+        </div>
+      </div>
+
+      <!-- Декоративная башня справа внизу -->
+      <img
+        class="tower-decoration"
+        src="img/1.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

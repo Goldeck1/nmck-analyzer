@@ -1,0 +1,22 @@
+# Web Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+starlette>=0.27.0
+
+# Database ORM
+sqlalchemy>=2.0.0
+
+# HTTP Client
+requests>=2.31.0
+
+# Data Processing
+pandas>=2.0.0
+
+# Document Generation
+python-docx>=1.1.0
+
+# Web Scraping
+playwright>=1.40.0
+
+# Note: After installing requirements, run 'playwright install' to install browser binaries

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Создание Технических заданий | Портал закупок</title>
+
+    <!-- Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style-tz.css" />
+  </head>
+
+  <body>
+    <main class="desktop page-tz">
+      <!-- Фоновый блюр сверху -->
+      <div class="top-blur" aria-hidden="true"></div>
+
+      <header class="page-header">
+        <div class="logo-container">
+          <img
+            class="logo-image"
+            src="img/image-2.png"
+            alt="Логотип"
+          />
+          <p class="logo-text">
+            Портал государственных закупок<br />Нижегородской области
+          </p>
+        </div>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <div class="nav-item active">
+            <a href="index.html" class="nav-link">ИИ-Помощник</a>
+            <div class="nav-indicator"></div>
+          </div>
+          <a href="instruction.html" class="nav-link">Инструкция</a>
+        </nav>
+      </header>
+
+      <!-- Контент -->
+      <div class="content-tz-wrapper">
+        <!-- Кнопка Назад -->
+        <div class="back-btn-container">
+          <a href="index.html" class="back-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Назад
+          </a>
+        </div>
+
+        <h1 class="page-title tz-title">Создание Технических заданий</h1>
+
+        <!-- Начальная форма -->
+        <div class="tz-form-card" id="initial-form">
+          <form id="tz-initial-form">
+            <div class="form-group">
+              <label class="form-label">Название товара</label>
+              <input type="text" name="name" class="form-input" placeholder="например, ноутбук" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Характеристики</label>
+              <textarea name="characteristics" class="form-input input-textarea" rows="4" placeholder="например, ноутбук с 8GB RAM, Intel i5" required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-submit">Начать диалог</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Область диалога (скрыта до начала диалога) -->
+        <div class="tz-dialog-container" id="dialog-container" style="display: none;">
+          <!-- Кнопка "Начать заново" -->
+          <div class="restart-btn-container">
+            <button type="button" class="btn-restart" id="restart-btn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 3.33333V1.66667M10 1.66667L8.33333 3.33333M10 1.66667L11.6667 3.33333M4.71333 4.71333L3.75 3.75M16.25 3.75L15.2867 4.71333M3.33333 10H1.66667M18.3333 10H16.6667M4.71333 15.2867L3.75 16.25M16.25 16.25L15.2867 15.2867M10 16.6667V18.3333M10 18.3333L8.33333 16.6667M10 18.3333L11.6667 16.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Начать заново
+            </button>
+          </div>
+
+          <!-- История диалога -->
+          <div class="dialog-history" id="dialog-history"></div>
+
+          <!-- Область для вариантов выбора -->
+          <div class="ideas-container" id="ideas-container"></div>
+
+          <!-- Область для отображения ТЗ -->
+          <div class="tz-result-container" id="tz-result-container"></div>
+
+          <!-- Поле для ответа на вопрос (скрыто до появления вопроса) -->
+          <div class="question-response-container" id="question-response-container" style="display: none;">
+            <form id="question-response-form">
+              <div class="form-group">
+                <textarea name="response" class="form-input input-textarea" rows="3" placeholder="Введите ваш ответ..." required></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn-submit">Отправить ответ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Декоративная башня справа внизу -->
+      <img
+        class="tower-decoration"
+        src="img/1.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

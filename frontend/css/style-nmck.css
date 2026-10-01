@@ -1,0 +1,252 @@
+/* =============================== */
+/* === СТИЛИ ДЛЯ СТРАНИЦЫ НМЦК === */
+/* =============================== */
+
+.content-nmck-wrapper {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 60px 40px;
+}
+
+/* Кнопка Назад (стрелочка) */
+.back-btn-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.nmck-title {
+  margin-bottom: 40px;
+}
+
+/* Карточка формы */
+.form-card {
+  width: 100%;
+  max-width: 600px; /* Оптимальная ширина формы */
+  background-color: #f2f0eb; /* Чуть темнее основного фона */
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+/* Табы (Переключатели) */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #e6e3dd; /* Неактивная кнопка */
+  color: #000;
+}
+
+.tab-btn.active {
+  background-color: #cfe9fd; /* Активная кнопка - голубая */
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Поля формы */
+.form-content {
+  display: none; /* Скрыто по умолчанию */
+  animation: fadeIn 0.3s ease;
+}
+
+.form-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.flex-grow {
+  flex: 1;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.form-label {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 8px;
+  margin-left: 0;
+}
+
+.form-input {
+  width: 95%;
+  border: 1px solid #d0d0d0; /* Рамка как в инпутах */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #7caacd;
+  box-shadow: 0 0 0 2px rgba(124, 170, 205, 0.2);
+}
+
+.input-short {
+  margin-left: 0px;
+  width: 30px; /* Узкое поле для кол-ва */
+}
+
+.input-textarea {
+  resize: none; /* Запрет растягивания */
+  min-height: 100px;
+}
+
+/* Зона загрузки (Upload) */
+.upload-area {
+  text-align: center;
+}
+
+.upload-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.upload-zone {
+  background-color: #cfe9fd; /* Голубой фон зоны */
+  border-radius: 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 160px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.upload-zone:hover {
+  background-color: #bfdff8;
+}
+
+.upload-hint {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.file-input-hidden {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.files-list-placeholder {
+  background-color: #d9d9d9; /* Серый плейсхолдер как на макете */
+  height: 120px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Кнопка отправки */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0px;
+}
+
+.btn-submit {
+  background-color: #7caacd;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(125, 170, 205, 0.3);
+  transition: all 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #6b9bc0;
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Адаптив НМЦК */
+@media (max-width: 768px) {
+  .content-nmck-wrapper {
+    padding: 0 20px 20px;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input-short {
+    width: 100%; /* На мобильном кол-во на всю ширину */
+  }
+}

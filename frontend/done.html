@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Результат НМЦК | Портал закупок</title>
+
+    <!-- Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Уникальные стили для страницы Done -->
+    <link rel="stylesheet" href="css/done-style.css" />
+  </head>
+
+  <body>
+    <main class="desktop page-done">
+      <!-- Фоновый блюр сверху -->
+      <div class="top-blur" aria-hidden="true"></div>
+
+      <header class="page-header">
+        <div class="logo-container">
+          <img
+            class="logo-image"
+            src="img/image-2.png"
+            alt="Логотип"
+          />
+          <p class="logo-text">
+            Портал государственных закупок<br />Нижегородской области
+          </p>
+        </div>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <div class="nav-item active">
+            <a href="index.html" class="nav-link">ИИ-Помощник</a>
+            <div class="nav-indicator"></div>
+          </div>
+          <a href="instruction.html" class="nav-link">Инструкция</a>
+        </nav>
+      </header>
+
+      <!-- Контент -->
+      <div class="content-done-wrapper">
+
+        <!-- Кнопка Назад -->
+        <div class="back-btn-container">
+            <a href="nmck.html" class="back-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад
+            </a>
+        </div>
+
+        <!-- Заголовок с галочкой -->
+        <div class="done-header">
+            <h1 class="done-title">Готово</h1>
+                <path d="M12.0001 21.4001L3.6001 13.0001L0.800098 15.8001L12.0001 27.0001L36.0001 3.00005L33.2001 0.200049L12.0001 21.4001Z" fill="#8FBC8F"/>
+        </div>
+
+        <!-- Карточка результата -->
+        <div class="result-card">
+
+            <!-- Верхняя часть формы (Редактируемая) -->
+            <div class="form-row">
+                <div class="form-group flex-grow">
+                    <label class="form-label">Наименование/ название</label>
+                    <div class="read-only-field" contenteditable="false" data-field="name" role="textbox" spellcheck="false">Пример наименования закупки</div>
+                </div>
+                <div class="form-group w-auto">
+                    <label class="form-label">Кол-во</label>
+                    <div class="read-only-field input-short" contenteditable="false" data-field="quantity" role="spinbutton" spellcheck="false">100</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Характеристики</label>
+                <div class="read-only-field input-textarea" contenteditable="false" data-field="characteristic" role="textbox" spellcheck="false">
+                    Здесь будет выведен список характеристик, сформированный системой...
+                </div>
+            </div>
+
+            <!-- Разделитель -->
+            <hr class="card-divider" />
+
+            <!-- Нижняя часть с файлами и ценой -->
+            <div class="bottom-section">
+                <div class="files-block">
+                    <label class="form-label">Сгенерированные файлы:</label>
+                    <div class="generated-files-area" role="region" aria-live="polite">
+                        <p class="generated-files-placeholder">
+                            После запроса здесь появится ссылка на Word‑файл с результатами.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="nmck-block">
+                    <label class="form-label">НМЦК:</label>
+                    <div class="read-only-field nmck-value" aria-live="polite">—</div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    <script src="app.js"></script>
+
+      <!-- Декоративная башня справа внизу -->
+      <img
+        class="tower-decoration"
+        src="img/1.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </main>
+  </body>
+</html>

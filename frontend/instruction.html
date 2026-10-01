@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкция | Портал закупок</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Подключаем общие стили -->
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Стили для страницы инструкции -->
+    <link rel="stylesheet" href="css/styles-instruction.css">
+</head>
+<body>
+    <!-- Добавляем класс scrollable, чтобы разрешить скролл (как на странице Done) -->
+    <main class="desktop page-instruction">
+        <!-- Фоновый блюр сверху -->
+        <div class="top-blur" aria-hidden="true"></div>
+
+        <header class="page-header">
+            <div class="logo-container">
+                <img
+                    class="logo-image"
+                    src="img/image-2.png"
+                    alt="Логотип"
+                />
+                <p class="logo-text">
+                    Портал государственных закупок<br />Нижегородской области
+                </p>
+            </div>
+
+            <nav class="main-nav" aria-label="Основная навигация">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">ИИ-Помощник</a>
+                    <!-- Индикатор убран, так как не активен -->
+                </div>
+
+                <!-- Активный пункт -->
+                <div class="nav-item active">
+                    <a href="instruction.html" class="nav-link">Инструкция</a>
+                    <div class="nav-indicator"></div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="instruction-wrapper">
+            <div class="header-title">ИНСТРУКЦИЯ</div>
+
+            <div class="nav-pills">
+                <a href="#stage-1" class="nav-pill">1 Этап</a>
+                <a href="#stage-2-1" class="nav-pill">2 Этап</a>
+                <a href="#stage-3" class="nav-pill">3 Этап</a>
+            </div>
+
+            <!-- Stage 1 -->
+            <section id="stage-1" class="content-card layout-text-left">
+                <div class="col-text">
+                    <div class="stage-title">1 Этап</div>
+                    <span class="stage-subtitle">Формирование НМЦК по заданным характеристикам</span>
+                    <ol class="instruction-list">
+                        <li>Наведите курсор на карточку "Формирование НМЦК" и нажмите левую кнопку мыши.</li>
+                    </ol>
+                </div>
+                <div class="col-image">
+                    <!-- Плейсхолдер для картинки -->
+                    <img src="img/Frame1.jpg" class="real-image" alt="Скриншот: Выберите модуль">
+            </section>
+
+            <!-- Stage 2.1 -->
+            <section id="stage-2-1" class="content-card layout-image-left">
+                <div class="col-text">
+                    <div class="stage-title">2 Этап</div>
+                    <span class="stage-subtitle">Ввод данных в форму</span>
+                    <ol class="instruction-list">
+                        <li>В графе "Наименование/название" введите нужный Вам товар.</li>
+                        <li>В графе "Характеристики" опишите характеристики Вашего товара.</li>
+                        <li>В графе "Кол-во" (количество) введите количество товара.</li>
+                        <li>Чтобы получить сформированное НМЦК, Вам нужно нажать на кнопку "Отправка запроса" (номер 4).</li>
+                    </ol>
+                </div>
+                <div class="col-image">
+                    <img src="img/Frame2.jpg" class="real-image" alt="Скриншот: Выберите модуль">
+                </div>
+            </section>
+
+            <!-- Stage 3 -->
+            <section id="stage-3" class="content-card layout-image-left">
+                <div class="col-text">
+                    <div class="stage-title">3 Этап</div>
+                    <span class="stage-subtitle">Скачивание сгенерированных данных</span>
+                    <ol class="instruction-list">
+                        <li>Под чертой в окне "Сгенерированные файлы" будут показаны итоговые файлы, загрузить их можно нажав кнопку "Скачать" (номер 1).</li>
+                        <li>Готовое НМЦК можно найти в графе "НМЦК" (номер 2).</li>
+                    </ol>
+                </div>
+                <div class="col-image">
+                    <img src="img/Frame3.jpg" class="real-image" alt="Скриншот: Выберите модуль">
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
